@@ -1,0 +1,10 @@
+.git/
+.vscode/
+**/*.pyproj
+**/*.sln
+**/__pycache__/
+**/*.ipynb
+**/*.jpg
+**/*.png
+data/
+wandb/
