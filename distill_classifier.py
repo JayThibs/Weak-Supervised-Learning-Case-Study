@@ -9,11 +9,6 @@ from datasets import Dataset
 from torch import nn
 from tqdm.auto import tqdm
 
-import wandb
-
-os.environ['WANDB_LOG_MODEL'] = 'true'
-wandb.init(project="weak-supervision-fsdl-project")
-
 from transformers import (
     AutoModelForSequenceClassification,
     AutoTokenizer,
@@ -25,6 +20,10 @@ from transformers import (
 )
 from transformers.trainer_utils import get_last_checkpoint, is_main_process
 
+import wandb
+
+os.environ['WANDB_LOG_MODEL'] = 'true'
+wandb.init(project="weak-supervision-fsdl-project")
 
 DESCRIPTION = """
 Distills an NLI-based zero-shot classifier to a smaller, more efficient model with a fixed set of candidate class
@@ -39,7 +38,6 @@ logger = logging.getLogger(__name__)
 
 @dataclass
 class TeacherModelArguments:
-#     report_to: 'wandb'
     teacher_name_or_path: Optional[str] = field(
         default="roberta-large-mnli", metadata={"help": "The NLI/zero-shot teacher model to be distilled."}
     )
@@ -69,11 +67,8 @@ class TeacherModelArguments:
     )
 
 
-#TODO Test different pretrained models bert-base-uncased, bert-base-cased, distilbert-base-uncased, bert-base-multilingual-cased, distilbert-base-multilingual-cased
-
 @dataclass
 class StudentModelArguments:
-#     report_to: 'wandb'
     student_name_or_path: Optional[str] = field(
         default="distilbert-base-uncased", metadata={"help": "The NLI/zero-shot teacher model to be distilled."}
     )
@@ -81,7 +76,6 @@ class StudentModelArguments:
 
 @dataclass
 class DataTrainingArguments:
-#     report_to: 'wandb'
     data_file: str = field(metadata={"help": "Text file with one unlabeled instance per line."})
     class_names_file: str = field(metadata={"help": "Text file with one class name per line."})
     use_fast_tokenizer: bool = field(
@@ -92,7 +86,6 @@ class DataTrainingArguments:
 
 @dataclass
 class DistillTrainingArguments(TrainingArguments):
-#     report_to: 'wandb'
     output_dir: Optional[str] = field(
         default=None,
         metadata={"help": "The output directory where the model predictions and checkpoints will be written."},
@@ -101,7 +94,7 @@ class DistillTrainingArguments(TrainingArguments):
         default=16, metadata={"help": "Batch size per GPU/TPU core/CPU for training."}
     )
     per_device_eval_batch_size: int = field(
-        default=16, metadata={"help": "Batch size per GPU/TPU core/CPU for evaluation."}
+        default=64, metadata={"help": "Batch size per GPU/TPU core/CPU for evaluation."}
     )
     num_train_epochs: float = field(default=1.0, metadata={"help": "Total number of training epochs to perform."})
     do_train: bool = field(default=True, metadata={"help": "Whether to run training of student model."})
@@ -136,7 +129,6 @@ class DistillationTrainer(Trainer):
         if return_outputs:
             return loss, outputs
 
-        wandb.log({"loss": loss})
         return loss
 
 
@@ -309,6 +301,9 @@ def main():
         }
     )
 
+    logger.info("Saving dataset with teacher soft predictions")
+    dataset.save_to_disk("dbmedia14_teacher_soft_preds.json")
+
     # 3. create student
     logger.info("Initializing student model")
     model = AutoModelForSequenceClassification.from_pretrained(
@@ -317,15 +312,6 @@ def main():
     tokenizer = AutoTokenizer.from_pretrained(student_args.student_name_or_path, use_fast=data_args.use_fast_tokenizer)
     model.config.id2label = {i: label for i, label in enumerate(class_names)}
     model.config.label2id = {label: i for i, label in enumerate(class_names)}
-    
-#     wandb.config = config
-#    logger = pl.loggers.WandbLogger()
-#    logger.watch(model)
-#    logger.log_hyperparams(vars(args))
-#     wandb["data_args"] = data_args
-#     wandb["teacher_args"] = teacher_args
-#     wandb["student_args"] = student_args
-#     wandb["training_args"] = training_args
 
     # 4. train student on teacher predictions
     dataset = dataset.map(tokenizer, input_columns="text")
@@ -334,10 +320,7 @@ def main():
     def compute_metrics(p, return_outputs=False):
         preds = p.predictions.argmax(-1)
         proxy_labels = p.label_ids.argmax(-1)  # "label_ids" are actually distributions
-        
-        agreement = (preds == proxy_labels).mean().item()
-        wandb.log({"agreement": agreement})
-        return {"agreement": agreement}
+        return {"agreement": (preds == proxy_labels).mean().item()}
 
     trainer = DistillationTrainer(
         model=model,
@@ -352,11 +335,11 @@ def main():
         trainer.train()
 
     if training_args.do_eval:
-        eval_agreement = trainer.evaluate(eval_dataset=dataset)["eval_agreement"]
-        wandb.log({"eval_agreement": eval_agreement})
-        logger.info(f"Agreement of student and teacher predictions: {eval_agreement * 100:0.2f}%")
+        agreement = trainer.evaluate(eval_dataset=dataset)["eval_agreement"]
+        logger.info(f"Agreement of student and teacher predictions: {agreement * 100:0.2f}%")
 
     trainer.save_model()
+
     wandb.finish()
 
 
