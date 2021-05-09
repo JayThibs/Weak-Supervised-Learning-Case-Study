@@ -7,6 +7,10 @@ q.DS_Store
 
 # Ignore everything inside wandb/
 /wandb
+**/wandb
+
+# Ignore model binaries
+models/**
 
 # anywhere in sub-folders, not necessarily under root
 .vscode/launch.json
