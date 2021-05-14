@@ -9,49 +9,49 @@ Find our project proposal **[here](https://github.com/JayThibs/Weak-Supervised-L
 
 ## File Structure for Project
 
-```
-./Weak-Supervised-Learning-Case-Study
-|-- ./Weak-Supervised-Learning-Case-Study/pyproject.toml
-|-- ./Weak-Supervised-Learning-Case-Study/requirements
-|   |-- ./Weak-Supervised-Learning-Case-Study/requirements/dev.in
-|   |-- ./Weak-Supervised-Learning-Case-Study/requirements/dev.txt
-|   |-- ./Weak-Supervised-Learning-Case-Study/requirements/prod.in
-|   `-- ./Weak-Supervised-Learning-Case-Study/requirements/prod.txt
-|-- ./Weak-Supervised-Learning-Case-Study/setup.cfg
-|-- ./Weak-Supervised-Learning-Case-Study/project_proposal.md
-|-- ./Weak-Supervised-Learning-Case-Study/training
-|   `-- ./Weak-Supervised-Learning-Case-Study/training/__init__.py
-|-- ./Weak-Supervised-Learning-Case-Study/tasks
-|   `-- ./Weak-Supervised-Learning-Case-Study/tasks/lint.sh
-|-- ./Weak-Supervised-Learning-Case-Study/text_classifier
-|   |-- ./Weak-Supervised-Learning-Case-Study/text_classifier/__init__.py
-|   |-- ./Weak-Supervised-Learning-Case-Study/text_classifier/models
-|   |   `-- ./Weak-Supervised-Learning-Case-Study/text_classifier/models/__init__.py
-|   |-- ./Weak-Supervised-Learning-Case-Study/text_classifier/lit_models
-|   |   `-- ./Weak-Supervised-Learning-Case-Study/text_classifier/lit_models/__init__.py
-|   `-- ./Weak-Supervised-Learning-Case-Study/text_classifier/notebooks
-|       |-- ./Weak-Supervised-Learning-Case-Study/text_classifier/notebooks/01_dbpedia_14_bert_classification_exploration.ipynb
-|       |-- ./Weak-Supervised-Learning-Case-Study/text_classifier/notebooks/02_dbmedia_14_distilling_with_zero_shot_classification.ipynb
-|       |-- ./Weak-Supervised-Learning-Case-Study/text_classifier/notebooks/03_dbpedia_14_snorkel_dataset_labeling.ipynb
-|       |-- ./Weak-Supervised-Learning-Case-Study/text_classifier/notebooks/04_transformers-multi-label-classification-toxicity.ipynb
-|       `-- ./Weak-Supervised-Learning-Case-Study/text_classifier/notebooks/05_toxicity_classification_snorkel_dataset.ipynb
-|-- ./Weak-Supervised-Learning-Case-Study/Dockerfile
-|-- ./Weak-Supervised-Learning-Case-Study/data
-|   |-- ./Weak-Supervised-Learning-Case-Study/data/readme.md
-|   `-- ./Weak-Supervised-Learning-Case-Study/data/toxic_comments
-|       |-- ./Weak-Supervised-Learning-Case-Study/data/toxic_comments/test.csv
-|       |-- ./Weak-Supervised-Learning-Case-Study/data/toxic_comments/toxic_dev_200_examples.csv
-|       |-- ./Weak-Supervised-Learning-Case-Study/data/toxic_comments/toxic_test_630_examples.csv
-|       |-- ./Weak-Supervised-Learning-Case-Study/data/toxic_comments/toxic_train_2100_examples.csv
-|       |-- ./Weak-Supervised-Learning-Case-Study/data/toxic_comments/toxic_val_70_examples.csv
-|       `-- ./Weak-Supervised-Learning-Case-Study/data/toxic_comments/train.csv
-|-- ./Weak-Supervised-Learning-Case-Study/distill_classifier.py
-|-- ./Weak-Supervised-Learning-Case-Study/service.py
-|-- ./Weak-Supervised-Learning-Case-Study/test_request.json
-|-- ./Weak-Supervised-Learning-Case-Study/train_baseline_dbpedia_model.py
-|-- ./Weak-Supervised-Learning-Case-Study/05_toxicity_classification_snorkel_dataset.ipynb
-`-- ./Weak-Supervised-Learning-Case-Study/README.md     
-```
+# Project tree
+
+.
+|-- ./pyproject.toml
+|-- ./requirements
+|   |-- ./requirements/dev.in
+|   |-- ./requirements/dev.txt
+|   |-- ./requirements/prod.in
+|   `-- ./requirements/prod.txt
+|-- ./setup.cfg
+|-- ./project_proposal.md
+|-- ./training
+|   `-- ./training/__init__.py
+|-- ./tasks
+|   `-- ./tasks/lint.sh
+|-- ./text_classifier
+|   |-- ./text_classifier/__init__.py
+|   |-- ./text_classifier/models
+|   |   `-- ./text_classifier/models/__init__.py
+|   |-- ./text_classifier/lit_models
+|   |   `-- ./text_classifier/lit_models/__init__.py
+|   `-- ./text_classifier/notebooks
+|       |-- ./text_classifier/notebooks/01_dbpedia_14_bert_classification_exploration.ipynb
+|       |-- ./text_classifier/notebooks/02_dbmedia_14_distilling_with_zero_shot_classification.ipynb
+|       |-- ./text_classifier/notebooks/03_dbpedia_14_snorkel_dataset_labeling.ipynb
+|       |-- ./text_classifier/notebooks/04_transformers-multi-label-classification-toxicity.ipynb
+|       `-- ./text_classifier/notebooks/05_toxicity_classification_snorkel_dataset.ipynb
+|-- ./Dockerfile
+|-- ./data
+|   |-- ./data/readme.md
+|   `-- ./data/toxic_comments
+|       |-- ./data/toxic_comments/test.csv
+|       |-- ./data/toxic_comments/toxic_dev_200_examples.csv
+|       |-- ./data/toxic_comments/toxic_test_630_examples.csv
+|       |-- ./data/toxic_comments/toxic_train_2100_examples.csv
+|       |-- ./data/toxic_comments/toxic_val_70_examples.csv
+|       `-- ./data/toxic_comments/train.csv
+|-- ./distill_classifier.py
+|-- ./service.py
+|-- ./test_request.json
+|-- ./train_baseline_dbpedia_model.py
+|-- ./05_toxicity_classification_snorkel_dataset.ipynb
+|-- ./README.md
 
 ## First, TorchScript
 
