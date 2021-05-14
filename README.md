@@ -11,6 +11,7 @@ Find our project proposal **[here](https://github.com/JayThibs/Weak-Supervised-L
 
 # Project tree
 
+```
 .
 |-- ./pyproject.toml
 |-- ./requirements
@@ -52,6 +53,7 @@ Find our project proposal **[here](https://github.com/JayThibs/Weak-Supervised-L
 |-- ./train_baseline_dbpedia_model.py
 |-- ./05_toxicity_classification_snorkel_dataset.ipynb
 |-- ./README.md
+```
 
 ## First, TorchScript
 
