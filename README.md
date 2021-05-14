@@ -7,7 +7,7 @@
 
 ## Project Tree
 
-```
+```md
 .
 |-- ./pyproject.toml
 |-- ./requirements
