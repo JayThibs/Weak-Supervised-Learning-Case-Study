@@ -47,7 +47,7 @@ def main():
 		
 		if st.button("Classify text"):
 			st.subheader("Results")
-			if(selected_model == "Zero-shot classification" ):
+			if(selected_model == "zero-shot-classification" ):
 
 				loading = st.info(f"Running prediction request ...")
 				prediction_result = backend.remote_zeroshot_inference_request(input_text, demos[selected_demo]["labels"], multi_class=False)
@@ -89,7 +89,7 @@ def main():
 		if st.button("Classify comment"):
 			st.subheader("Results")
 
-			if(selected_model == "Zero-shot classification" ):
+			if(selected_model == "zero-shot-classification" ):
 
 				loading = st.info(f"Running prediction request ...")
 				prediction_result = backend.remote_zeroshot_inference_request(input_text, demos[selected_demo]["labels"], multi_class=True)
@@ -112,6 +112,11 @@ def main():
 
 					with st.beta_expander("See detailed scores", expanded=True):
 						st.write(prediction_result)					
+			elif(selected_model == "weak-labeling-snorkel-based-model" ):
+				prediction_result = backend.remote_inference_request_snorkel(input_text, selected_model)
+
+				st.write(json.loads(prediction_result))
+
 			else:
 				
 				prediction_result = backend.remote_inference_request(input_text, selected_model)
