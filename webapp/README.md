@@ -9,7 +9,7 @@ docker build -t weaklabeling-ui .
 
 Running it
 ```
-docker run -it weaklabeling-ui
+docker run -it -p 8501:8501 weaklabeling-ui
 ```  
 
 Open http://localhost:8501
