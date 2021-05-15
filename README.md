@@ -11,7 +11,7 @@ This project can be broken down into several parts.
 
 ### Notebooks
 
-* [01_dbpedia_14_bert_classification_exploration.ipynb](https://github.com/JayThibs/Weak-Supervised-Learning-Case-Study/blob/main/text_classifier/notebooks/01_dbpedia_14_bert_classification_exploration.ipynb)
+* [01_dbpedia_14_bert_classification_exploration.ipynb](https://github.com/JayThibs/Weak-Supervised-Learning-Case-Study/blob/main/text_classifier/notebooks/01_dbpedia_14_bert_classification_exploration.ipynb): In this notebook we train a baseline bert model on the DBpedia-14 dataset.
 * [02_dbmedia_14_distilling_with_zero_shot_classification.ipynb](https://github.com/JayThibs/Weak-Supervised-Learning-Case-Study/blob/main/text_classifier/notebooks/02_dbmedia_14_distilling_with_zero_shot_classification.ipynb)
 * [03_dbpedia_14_snorkel_dataset_labeling.ipynb](https://github.com/JayThibs/Weak-Supervised-Learning-Case-Study/blob/main/text_classifier/notebooks/03_dbpedia_14_snorkel_dataset_labeling.ipynb)
 * [04_transformers-multi-label-classification-toxicity.ipynb](https://github.com/JayThibs/Weak-Supervised-Learning-Case-Study/blob/main/text_classifier/notebooks/04_transformers-multi-label-classification-toxicity.ipynb)
