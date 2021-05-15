@@ -5,6 +5,27 @@
 - Create a text data labeling service where the user inputs text data and receives a labeled dataset.
 - Experiment with weak supervised learning and compare different approaches.
 
+## Project Breakdown
+
+This project can be broken down into several parts.
+
+### Notebooks
+
+* [01_dbpedia_14_bert_classification_exploration.ipynb](https://github.com/JayThibs/Weak-Supervised-Learning-Case-Study/blob/main/text_classifier/notebooks/01_dbpedia_14_bert_classification_exploration.ipynb)
+* [02_dbmedia_14_distilling_with_zero_shot_classification.ipynb](https://github.com/JayThibs/Weak-Supervised-Learning-Case-Study/blob/main/text_classifier/notebooks/02_dbmedia_14_distilling_with_zero_shot_classification.ipynb)
+* [03_dbpedia_14_snorkel_dataset_labeling.ipynb](https://github.com/JayThibs/Weak-Supervised-Learning-Case-Study/blob/main/text_classifier/notebooks/03_dbpedia_14_snorkel_dataset_labeling.ipynb)
+* [04_transformers-multi-label-classification-toxicity.ipynb](https://github.com/JayThibs/Weak-Supervised-Learning-Case-Study/blob/main/text_classifier/notebooks/04_transformers-multi-label-classification-toxicity.ipynb)
+* [05_toxicity_classification_snorkel_dataset.ipynb](https://github.com/JayThibs/Weak-Supervised-Learning-Case-Study/blob/main/text_classifier/notebooks/05_toxicity_classification_snorkel_dataset.ipynb)
+* [06_AMLS_model_deployment.ipynb](https://github.com/JayThibs/Weak-Supervised-Learning-Case-Study/blob/main/text_classifier/notebooks/06_AMLS_model_deployment.ipynb)
+
+### Deployment
+
+*
+
+### Streamlit App with Label Studio Integration
+
+*
+
 ## Project Tree
 
 ```md
