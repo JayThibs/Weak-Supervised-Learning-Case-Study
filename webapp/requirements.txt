@@ -1,0 +1,5 @@
+streamlit==0.81.1
+matplotlib==3.4.2
+matplotlib-inline==0.1.2
+pandas==1.2.4
+plotly==4.14.3
