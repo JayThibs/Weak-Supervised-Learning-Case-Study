@@ -18,4 +18,4 @@ docker build -t weaklabeling-ui .
 docker run -it -p 8501:8501 weaklabeling-ui
 ```  
 
-Open http://localhost:8501
+5. Open http://localhost:8501 and test it out!
