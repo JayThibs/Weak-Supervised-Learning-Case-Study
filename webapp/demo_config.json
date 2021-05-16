@@ -1,5 +1,5 @@
 {
-    
+
 	"DBpedia14":{
 		"labelstudio_project_id":1,
 		"title":"DBpedia entity classifier",
@@ -12,7 +12,7 @@
 	"Rosenberg Library. Rosenberg Library a public library located at 2310 Sealy Street in Galveston Texas United States is the oldest continuously operating library in Texas. It serves as headquarters of the Galveston County Library System and its librarian also functions as the Galveston County Librarian."	
 		],
 		"labels":["Company", "Educational Institution", "Artist", "Athlete", "Office Holder", "Mean Of Transportation", "Building", "Natural Place", "Village", "Animal", "Plant", "Album", "Film", "Written Work"],
-		"available_models":["dbpedia_baseline_bert", "dbpedia_distilbert", "Zero-shot classification"]
+		"available_models":["dbpedia_baseline_bert", "dbpedia_distilbert", "zero-shot-classification"]
 	},
 
 
@@ -28,6 +28,6 @@
             "Go back to your country"
 		],
 		"labels":["toxic", "severe_toxic", "obscene", "threat", "insult", "identity_hate"],
-		"available_models":["toxic_comments_baseline_bert", "Zero-shot classification"]
+		"available_models":["toxic_comments_baseline_bert","weak-labeling-snorkel-based-model" ,"zero-shot-classification"]
 	}
 }
