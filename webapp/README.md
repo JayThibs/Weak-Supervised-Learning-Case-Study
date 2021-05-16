@@ -1,4 +1,4 @@
-# Webapp prototype
+# Streamlit Web App for Text Classification
 
 This is a simple UI to test endpoints and let users play with the models.
 
