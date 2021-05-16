@@ -1,30 +1,20 @@
-# Weak Supervised Learning: A Case Study
+# A Case Study on Weakly Supervised Learning
+
+View our write-up of the project here: [A Case Study on Weakly Supervised Learning](https://docs.google.com/document/d/1oRHR_fUFEEYFOyHkR0sqv50XQFplEhcQhY0QrMw4z7s/edit?usp=sharing).
 
 ## Goal of the project
 
 - Create a text data labeling service where the user inputs text data and receives a labeled dataset.
 - Experiment with weak supervised learning and compare different approaches.
 
-## Project Breakdown
-
-This project can be broken down into several parts.
-
 ### Notebooks
 
-* [01_dbpedia_14_bert_classification_exploration.ipynb](https://github.com/JayThibs/Weak-Supervised-Learning-Case-Study/blob/main/text_classifier/notebooks/01_dbpedia_14_bert_classification_exploration.ipynb): In this notebook we train a baseline bert model on the DBpedia-14 dataset.
-* [02_dbmedia_14_distilling_with_zero_shot_classification.ipynb](https://github.com/JayThibs/Weak-Supervised-Learning-Case-Study/blob/main/text_classifier/notebooks/02_dbmedia_14_distilling_with_zero_shot_classification.ipynb)
-* [03_dbpedia_14_snorkel_dataset_labeling.ipynb](https://github.com/JayThibs/Weak-Supervised-Learning-Case-Study/blob/main/text_classifier/notebooks/03_dbpedia_14_snorkel_dataset_labeling.ipynb)
-* [04_transformers-multi-label-classification-toxicity.ipynb](https://github.com/JayThibs/Weak-Supervised-Learning-Case-Study/blob/main/text_classifier/notebooks/04_transformers-multi-label-classification-toxicity.ipynb)
-* [05_toxicity_classification_snorkel_dataset.ipynb](https://github.com/JayThibs/Weak-Supervised-Learning-Case-Study/blob/main/text_classifier/notebooks/05_toxicity_classification_snorkel_dataset.ipynb)
-* [06_AMLS_model_deployment.ipynb](https://github.com/JayThibs/Weak-Supervised-Learning-Case-Study/blob/main/text_classifier/notebooks/06_AMLS_model_deployment.ipynb)
-
-### Deployment
-
-*
-
-### Streamlit App with Label Studio Integration
-
-*
+* [01. Baseline with BERT on DBPedia-14](https://github.com/JayThibs/Weak-Supervised-Learning-Case-Study/blob/main/text_classifier/notebooks/01_dbpedia_14_bert_classification_exploration.ipynb)
+* [02. Distilling with Zero-Shot Classification on DBPedia-14](https://github.com/JayThibs/Weak-Supervised-Learning-Case-Study/blob/main/text_classifier/notebooks/02_dbmedia_14_distilling_with_zero_shot_classification.ipynb)
+* [03. Data Labeling DBPedia-14 with Snorkel](https://github.com/JayThibs/Weak-Supervised-Learning-Case-Study/blob/main/text_classifier/notebooks/03_dbpedia_14_snorkel_dataset_labeling.ipynb)
+* [04. Multi-Label Classification on Toxic Comments Dataset](https://github.com/JayThibs/Weak-Supervised-Learning-Case-Study/blob/main/text_classifier/notebooks/04_transformers-multi-label-classification-toxicity.ipynb)
+* [05. Toxcity Dataset Classifcation and Data Labeling with Snorkel](https://github.com/JayThibs/Weak-Supervised-Learning-Case-Study/blob/main/text_classifier/notebooks/05_toxicity_classification_snorkel_dataset.ipynb)
+* [06 Model Deployment in Azure Machine Learning Studio](https://github.com/JayThibs/Weak-Supervised-Learning-Case-Study/blob/main/text_classifier/notebooks/06_AMLS_model_deployment.ipynb)
 
 ## Project Tree
 
