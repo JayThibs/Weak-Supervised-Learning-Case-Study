@@ -1,6 +1,6 @@
 # A Case Study on Weakly Supervised Learning
 
-View our write-up of the project here: [A Case Study on Weakly Supervised Learning](https://docs.google.com/document/d/1oRHR_fUFEEYFOyHkR0sqv50XQFplEhcQhY0QrMw4z7s/edit?usp=sharing).
+View our write-up of the project here: [A Case Study on Weakly Supervised Learning](https://docs.google.com/document/d/1LezryNpV9j2ltfesDj9lwQ0wvoyuC7Ge_K1WyNuHZzQ/edit?usp=sharing).
 
 Project was created for the Full Stack Deep Learning 2021 course. This project was chosen as one of the top projects from the course and presented at the project showcase.
 
@@ -15,7 +15,7 @@ Project was created for the Full Stack Deep Learning 2021 course. This project w
 * [02. Distilling with Zero-Shot Classification on DBPedia-14 (GitHub link)](https://github.com/JayThibs/Weak-Supervised-Learning-Case-Study/blob/main/text_classifier/notebooks/02_dbmedia_14_distilling_with_zero_shot_classification.ipynb)
 * [03. Data Labeling DBPedia-14 with Snorkel (GitHub link)](https://github.com/JayThibs/Weak-Supervised-Learning-Case-Study/blob/main/text_classifier/notebooks/03_dbpedia_14_snorkel_dataset_labeling.ipynb) - [Colab version](https://colab.research.google.com/github/JayThibs/Weak-Supervised-Learning-Case-Study/blob/main/text_classifier/notebooks/03_dbpedia_14_snorkel_dataset_labeling.ipynb)
 * [04. Multi-Label Classification on Toxic Comments Dataset (GitHub link)](https://github.com/JayThibs/Weak-Supervised-Learning-Case-Study/blob/main/text_classifier/notebooks/04_transformers-multi-label-classification-toxicity.ipynb)
-* [05. Toxicity Dataset Classifcation and Data Labeling with Snorkel (GitHub link)](https://github.com/JayThibs/Weak-Supervised-Learning-Case-Study/blob/main/text_classifier/notebooks/05_toxicity_classification_snorkel_dataset.ipynb) - [Colab version](https://colab.research.google.com/github/JayThibs/Weak-Supervised-Learning-Case-Study/blob/main/text_classifier/notebooks/05_toxicity_classification_snorkel_dataset.ipynb)
+* [05. Toxicity Dataset Classification and Data Labeling with Snorkel (GitHub link)](https://github.com/JayThibs/Weak-Supervised-Learning-Case-Study/blob/main/text_classifier/notebooks/05_toxicity_classification_snorkel_dataset.ipynb) - [Colab version](https://colab.research.google.com/github/JayThibs/Weak-Supervised-Learning-Case-Study/blob/main/text_classifier/notebooks/05_toxicity_classification_snorkel_dataset.ipynb)
 * [06. Model Deployment in Azure Machine Learning Studio (GitHub link)](https://github.com/JayThibs/Weak-Supervised-Learning-Case-Study/blob/main/text_classifier/notebooks/06_AMLS_model_deployment.ipynb)
 
 ## How to use this Project
